@@ -287,8 +287,8 @@ onClick={() => {
 
 
 
-      {/* =========================
-   EDUCATION (TIMELINE STYLE)
+{/* =========================
+EDUCATION (TIMELINE STYLE)
 ========================= */}
 <section id="education" className="section">
 
@@ -319,7 +319,7 @@ onClick={() => {
 </section>
 
 {/* =========================
-   CERTIFICATIONS (TIMELINE STYLE)
+  CERTIFICATIONS (TIMELINE STYLE)
 ========================= */}
 <section id="certifications" className="section">
   <h2 className="heading">Certifications</h2>
@@ -386,6 +386,14 @@ onClick={() => {
     Open to opportunities in Data Analytics roles
   </p>
 
+{/* RESUME BUTTON */}
+
+  <a href="/resume.pdf" download className="resume-btn outline">
+    📄 Download Resume
+  </a>
+
+
+
   {/* EMAIL + PHONE */}
   <div className="contact-simple">
 
@@ -423,23 +431,8 @@ onClick={() => {
         alt="GitHub"
       />
     </a>
-
   </div>
-
 </section>
-{/* 
-  SOCIAL ICONS
-  <div className="social-icons">
-
-    <a href="https://linkedin.com" className="icon-btn linkedin">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
-    </a>
-
-    <a href="https://github.com" className="icon-btn github">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" />
-    </a>
-
-  </div> */}
   </main>
   );
 }

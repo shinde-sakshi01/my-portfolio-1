@@ -3,9 +3,7 @@
 ========================= */
 
 html {
-  scroll-behavior: smooth;
-}
-
+  scroll-behavior: smooth;}
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +13,13 @@ html {
     background 0.3s ease,
     border 0.3s ease,
     color 0.3s ease,
-    transform 0.3s ease;
-}
+    transform 0.3s ease;}
 
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   background: #050713;
   color: #e5e7eb;
-  overflow-x: hidden;
-}
+  overflow-x: hidden;}
 
 /* =========================
    PREMIUM BACKGROUND
@@ -39,8 +35,7 @@ body::before {
     radial-gradient(circle at 80% 0%, rgba(99,102,241,0.10), transparent 50%),
     radial-gradient(circle at 50% 90%, rgba(236,72,153,0.06), transparent 55%);
 
-  z-index: -2;
-}
+  z-index: -2;}
 
 body::after {
   content: "";
@@ -50,35 +45,29 @@ body::after {
   background:
     radial-gradient(circle, rgba(255,255,255,0.02), transparent 70%);
 
-  z-index: -1;
-}
+  z-index: -1;}
 
 /* =========================
-   SCROLLBAR
+SCROLLBAR
 ========================= */
 
 ::-webkit-scrollbar {
-  width: 8px;
-}
+  width: 8px;}
 
 ::-webkit-scrollbar-track {
-  background: #050713;
-}
+  background: #050713;}
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     180deg,
     #38bdf8,
-    #6366f1
-  );
+    #6366f1 );
 
-  border-radius: 20px;
-}
+  border-radius: 20px;}
 
 ::selection {
   background: rgba(56,189,248,0.25);
-  color: white;
-}
+  color: white;}
 
 /* =========================
    NAVBAR
@@ -102,8 +91,7 @@ body::after {
 
   border-bottom: 1px solid rgba(255,255,255,0.05);
 
-  z-index: 999;
-}
+  z-index: 999;}
 
 .logo {
   font-size: 18px;
@@ -882,60 +870,179 @@ body::after {
    CONTACT
 ========================= */
 
+/* =========================
+   CONTACT (MINIMAL LUXURY - NO BOX)
+========================= */
+
 .contact-v2 {
   text-align: center;
 
-  padding-bottom: 40px;
+  padding: 140px 20px 90px;
+
+  position: relative;
 }
 
+/* soft luxury glow background */
+.contact-v2::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 30% 20%, rgba(56,189,248,0.12), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(168,85,247,0.10), transparent 60%);
+
+  filter: blur(70px);
+
+  z-index: -1;
+}
+
+/* status pill (keep floating style) */
 .status-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 
-  padding: 8px 14px;
+  padding: 7px 14px;
 
   border-radius: 999px;
 
-  background: rgba(56,189,248,0.1);
-  border: 1px solid rgba(56,189,248,0.3);
+  background: rgba(56,189,248,0.08);
+  border: 1px solid rgba(56,189,248,0.25);
 
   color: #38bdf8;
+
   font-size: 12px;
+
+  letter-spacing: 0.5px;
 }
 
+/* big title (no box feel) */
 .contact-title {
-  max-width: 780px;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
 
-  margin: 18px auto;
-
-  font-size: 34px;
-  line-height: 1.3;
-
-  color: white;
+  background: linear-gradient(90deg, #ffffff, #7dd3fc, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* subtitle */
 .contact-sub {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   color: #9ca3af;
+  font-size: 15px;
 }
 
-.contact-simple {
-  margin: 18px 0;
-}
-
+/* contact text lines (clean floating style) */
 .contact-line {
-  margin: 8px 0;
+  margin: 10px 0;
 
   font-size: 18px;
   color: #cbd5e1;
+  letter-spacing: 0.2px;
 }
 
 .contact-line span {
-  color: white;
+  color: #ffffff;
+  font-weight: 600;
 }
 
+/* resume button (still premium, no box) */
+.resume-btn {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  color: #38bdf8;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  text-decoration: none;
+
+  position: relative;
+
+  transition: 0.3s ease;
+}
+
+/* elegant underline hover */
+.resume-btn::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 1px;
+
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  color: #7dd3fc;
+  transform: translateY(-2px);
+}
+
+.resume-btn:hover::after {
+  width: 100%;
+}
+/* social icons (floating, no container feel) */
+.social-icons {
+  margin-top: 28px;
+
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.icon-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-6px) scale(1.08);
+}
+
+/* glow effects */
+.linkedin:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 0 25px rgba(56,189,248,0.4);
+}
+
+.github:hover {
+  border-color: #a855f7;
+  box-shadow: 0 0 25px rgba(168,85,247,0.4);
+}
 /* =========================
    SOCIAL ICONS
 ========================= */
